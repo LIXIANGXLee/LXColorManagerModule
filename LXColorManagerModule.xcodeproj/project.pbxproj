@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,12 @@
 		04CFC486245D3B7300C9BE9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CFC484245D3B7300C9BE9E /* Main.storyboard */; };
 		04CFC488245D3B7600C9BE9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CFC487245D3B7600C9BE9E /* Assets.xcassets */; };
 		04CFC48B245D3B7600C9BE9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CFC489245D3B7600C9BE9E /* LaunchScreen.storyboard */; };
+		04CFC493245D3BF600C9BE9E /* LXColorManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 04CFC492245D3BF600C9BE9E /* LXColorManager.podspec */; };
+		E6FDB0219167E8FB8113A370 /* Pods_LXColorManagerModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346A38B38F65704A2BF4EF9 /* Pods_LXColorManagerModule.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0346A38B38F65704A2BF4EF9 /* Pods_LXColorManagerModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXColorManagerModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CFC47B245D3B7300C9BE9E /* LXColorManagerModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXColorManagerModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CFC47E245D3B7300C9BE9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CFC480245D3B7300C9BE9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		04CFC487245D3B7600C9BE9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CFC48A245D3B7600C9BE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CFC48C245D3B7600C9BE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CFC492245D3BF600C9BE9E /* LXColorManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LXColorManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		39B4FDC27D5DBC742F1CA3D3 /* Pods-LXColorManagerModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXColorManagerModule.debug.xcconfig"; path = "Target Support Files/Pods-LXColorManagerModule/Pods-LXColorManagerModule.debug.xcconfig"; sourceTree = "<group>"; };
+		938FE96C4BB2559F6DA6EDB2 /* Pods-LXColorManagerModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXColorManagerModule.release.xcconfig"; path = "Target Support Files/Pods-LXColorManagerModule/Pods-LXColorManagerModule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6FDB0219167E8FB8113A370 /* Pods_LXColorManagerModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +47,11 @@
 		04CFC472245D3B7300C9BE9E = {
 			isa = PBXGroup;
 			children = (
+				04CFC492245D3BF600C9BE9E /* LXColorManager.podspec */,
 				04CFC47D245D3B7300C9BE9E /* LXColorManagerModule */,
 				04CFC47C245D3B7300C9BE9E /* Products */,
+				D991DDF191FB0B934BED73DC /* Pods */,
+				932F74CDDE878E5F125C2594 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +77,23 @@
 			path = LXColorManagerModule;
 			sourceTree = "<group>";
 		};
+		932F74CDDE878E5F125C2594 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0346A38B38F65704A2BF4EF9 /* Pods_LXColorManagerModule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D991DDF191FB0B934BED73DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39B4FDC27D5DBC742F1CA3D3 /* Pods-LXColorManagerModule.debug.xcconfig */,
+				938FE96C4BB2559F6DA6EDB2 /* Pods-LXColorManagerModule.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04CFC48F245D3B7600C9BE9E /* Build configuration list for PBXNativeTarget "LXColorManagerModule" */;
 			buildPhases = (
+				A710724E290CFB7C5511891F /* [CP] Check Pods Manifest.lock */,
 				04CFC477245D3B7300C9BE9E /* Sources */,
 				04CFC478245D3B7300C9BE9E /* Frameworks */,
 				04CFC479245D3B7300C9BE9E /* Resources */,
+				3B72189EB190AC48AAF080DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CFC493245D3BF600C9BE9E /* LXColorManager.podspec in Resources */,
 				04CFC48B245D3B7600C9BE9E /* LaunchScreen.storyboard in Resources */,
 				04CFC488245D3B7600C9BE9E /* Assets.xcassets in Resources */,
 				04CFC486245D3B7300C9BE9E /* Main.storyboard in Resources */,
@@ -132,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B72189EB190AC48AAF080DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LXColorManagerModule/Pods-LXColorManagerModule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LXColorManagerModule/Pods-LXColorManagerModule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LXColorManagerModule/Pods-LXColorManagerModule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A710724E290CFB7C5511891F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LXColorManagerModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04CFC477245D3B7300C9BE9E /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		04CFC490245D3B7600C9BE9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39B4FDC27D5DBC742F1CA3D3 /* Pods-LXColorManagerModule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +373,7 @@
 		};
 		04CFC491245D3B7600C9BE9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938FE96C4BB2559F6DA6EDB2 /* Pods-LXColorManagerModule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

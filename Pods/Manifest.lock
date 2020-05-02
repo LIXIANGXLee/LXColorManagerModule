@@ -1,0 +1,16 @@
+PODS:
+  - LXColorManager (1.0.0)
+
+DEPENDENCIES:
+  - LXColorManager (from `./`)
+
+EXTERNAL SOURCES:
+  LXColorManager:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  LXColorManager: 1e3b3cf605777e0f78eaa4a34ab280eb83c69eb7
+
+PODFILE CHECKSUM: 92cf7ab7783423aae16b74e1326cacb924ad0d17
+
+COCOAPODS: 1.9.1
