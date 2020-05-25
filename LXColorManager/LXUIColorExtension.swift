@@ -17,18 +17,24 @@ public extension UIColor {
     static func color(lightHex: String,
                       darkHex: String = "666666")
         -> UIColor {
-        if #available(iOS 13.0, *) {
-           return UIColor { (traitCollection) -> UIColor in
-                if traitCollection.userInterfaceStyle == .dark {
-                    return UIColor(hex: darkHex) ?? UIColor.white
-                }else {
-                    return UIColor(hex: lightHex) ?? UIColor.black
-                }
-            }
-        } else {
-           return UIColor(hex: lightHex) ?? UIColor.black
-        }
+        return color(lightColor: UIColor(hex: lightHex) ?? UIColor.black, darkColor: UIColor(hex: darkHex) ?? UIColor.white)
     }
+
+   static func color(lightColor: UIColor,
+                     darkColor: UIColor)
+       -> UIColor {
+       if #available(iOS 13.0, *) {
+          return UIColor { (traitCollection) -> UIColor in
+               if traitCollection.userInterfaceStyle == .dark {
+                   return darkColor
+               }else {
+                   return lightColor
+               }
+           }
+       } else {
+          return lightColor
+       }
+   }
     
     /// 类方法 （随即颜色）
      class func randomColor() -> UIColor {

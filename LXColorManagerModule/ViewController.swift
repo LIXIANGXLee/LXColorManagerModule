@@ -16,17 +16,17 @@ class ViewController: UIViewController {
       
         
         
-        self.view.backgroundColor = UIColor.color(lightHex: "333333", darkHex: "FFFFFF")
-        
+//        self.view.backgroundColor = UIColor.color(lightHex: "333333", darkHex: "FFFFFF")
+        self.view.backgroundColor = UIColor.color(lightColor: UIColor.red, darkColor: UIColor.green)
     }
 
-     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-            super.traitCollectionDidChange(previousTraitCollection)
-           if #available(iOS 13.0, *) {
-               self.traitCollection.performAsCurrent {
-                   print("-=-=-=-=-=-=")
-               }
-           }
-       }
+//     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+//            super.traitCollectionDidChange(previousTraitCollection)
+//           if #available(iOS 13.0, *) {
+//               self.traitCollection.performAsCurrent {
+//                   print("-=-=-=-=-=-=")
+//               }
+//           }
+//       }
 }
 
