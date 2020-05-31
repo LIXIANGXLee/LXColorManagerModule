@@ -1,5 +1,5 @@
 PODS:
-  - LXColorManager (1.0.0)
+  - LXColorManager (1.2.0)
 
 DEPENDENCIES:
   - LXColorManager (from `./`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  LXColorManager: 1e3b3cf605777e0f78eaa4a34ab280eb83c69eb7
+  LXColorManager: e1cf1fa1828c07039bbb029f6a6c571b82262d6c
 
 PODFILE CHECKSUM: 92cf7ab7783423aae16b74e1326cacb924ad0d17
 
