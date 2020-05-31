@@ -9,41 +9,6 @@ import UIKit
 
 // MARK: -  颜色处理类
 public extension UIColor {
-
-    // MARK: - extension 适配深色模式 浅色模式 非layer
-     ///lightHex  浅色模式的颜色（十六进制）
-     ///darkHex   深色模式的颜色（十六进制）
-     ///return    返回一个颜色（UIColor）
-     static func color(lightHex: String,
-                       darkHex: String,
-                       alpha: CGFloat = 1.0)
-         -> UIColor {
-         let light = UIColor(hex: lightHex, alpha) ?? UIColor.black
-         let dark =  UIColor(hex: darkHex, alpha) ?? UIColor.white
-             
-         return color(lightColor: light, darkColor: dark)
-     }
-
-     // MARK: - extension 适配深色模式 浅色模式 非layer
-     ///lightColor  浅色模式的颜色（UIColor）
-     ///darkColor   深色模式的颜色（UIColor）
-     ///return    返回一个颜色（UIColor）
-    static func color(lightColor: UIColor,
-                      darkColor: UIColor)
-        -> UIColor {
-        if #available(iOS 13.0, *) {
-           return UIColor { (traitCollection) -> UIColor in
-                if traitCollection.userInterfaceStyle == .dark {
-                    return darkColor
-                }else {
-                    return lightColor
-                }
-            }
-        } else {
-           return lightColor
-        }
-    }
-
     
     /// 类方法 （随即颜色）
      class func randomColor() -> UIColor {
@@ -76,11 +41,11 @@ public extension UIColor {
    }
    
    // MARK: - 构造函数（十六进制）
-   convenience init?(hex : String,
+   convenience init?(hexStr : String,
                      _ alpha : CGFloat = 1.0)
    {
      
-       var cHex = hex.trimmingCharacters(in: CharacterSet.whitespaces).uppercased()
+       var cHex = hexStr.trimmingCharacters(in: CharacterSet.whitespaces).uppercased()
        guard cHex.count >= 6 else {
            return nil
        }

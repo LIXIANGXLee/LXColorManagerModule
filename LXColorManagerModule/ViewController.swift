@@ -13,11 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        
-        
-//        self.view.backgroundColor = UIColor.color(lightHex: "333333", darkHex: "FFFFFF")
-        self.view.backgroundColor = UIColor.color(lightColor: UIColor.red, darkColor: UIColor.green)
+
     }
 
 //     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
